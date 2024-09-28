@@ -42,10 +42,9 @@ function Links() {
           <NavLink item={{ title: "Login", path: "/login" }} />
         )}
       </div>
-
       <Image
         src="/menu.png"
-        alt=""
+        alt="menu_button"
         width={30}
         height={30}
         className={styles.menuButton}

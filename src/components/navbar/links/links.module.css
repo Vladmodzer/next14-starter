@@ -1,3 +1,6 @@
+.container {
+  display: flex;
+}
 .links {
   display: flex;
   align-items: center;
@@ -13,6 +16,11 @@
 }
 .menuButton {
   display: none !important;
+ 
+}
+.menuButton span{
+  display: none !important;
+  visibility: hidden;
 }
 @media (max-width: 768px) {
   .links {
