@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "./about.module.css";
 function Aboutpage() {
   // console.log("lets check wehre its works!");
-  
+
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
@@ -33,9 +33,10 @@ function Aboutpage() {
         <Image
           src="/about.png"
           alt="About Image"
-          fill
+          layout="fill"
           className={styles.img}
           sizes="100%"
+          priority
         />
       </div>
     </div>

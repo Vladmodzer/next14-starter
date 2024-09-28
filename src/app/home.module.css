@@ -46,6 +46,8 @@
     text-align: center;
   }
 }
+
+
 @media (max-width: 768px) {
   .tittle {
     font-size: 64px;

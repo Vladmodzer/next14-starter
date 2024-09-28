@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "./home.module.css";
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
           <Image
             src="/brands.png"
             alt=""
-            fill
+            layout="fill"
             className={styles.brandImg}
             sizes="100%"
           />
@@ -28,8 +28,10 @@ const Home = () => {
           src="/hero.gif"
           alt=""
           className={styles.heroImg}
-          fill
-          sizes="100%"
+          layout="fill"
+          sizes="(max-width: 768px) 100vw"
+          unoptimized
+          priority
         />
       </div>
     </div>

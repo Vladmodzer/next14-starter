@@ -2,27 +2,35 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  height: 100%;
 }
 .top {
   display: flex;
   justify-content: space-between;
 }
+/* postCard.module.css */
 .imgContainer {
-  width:100% ;
-  height: 400px;
   position: relative;
+  width: 100%; /* Ширина 100% */
+  height: 400px; /* Высота задана */
+  overflow: hidden; /* Скрывает часть изображения, если оно превышает контейнер */
 }
-.img {
-  object-fit: cover;
 
+.img {
+  object-fit: cover; /* Сохранение пропорций изображения */
 }
+
 .date {
   font-size: small;
   transform: rotate(270deg);
   margin: auto;
 }
 .bottom {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .tittle {
   font-style: 24px;

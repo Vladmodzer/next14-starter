@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "./contact.module.css";
 // import dynamic from "next/dynamic";
 
@@ -26,7 +26,7 @@ function ContactPage() {
           className={styles.img}
           alt=""
           src="/contact.png"
-          fill
+          layout="fill"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
