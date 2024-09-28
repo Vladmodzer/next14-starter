@@ -16,7 +16,7 @@ async function BlogPage() {
     <div className={styles.container}>
       {posts.map((post) => (
         <div className={styles.post}>
-          <PostCard post={post} />
+          <PostCard post={post} key={post.id} />
         </div>
       ))}
     </div>

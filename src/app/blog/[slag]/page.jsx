@@ -9,7 +9,7 @@ function SinglePostPage() {
       <div className={styles.imgContainer}>
         <Image
           src="https://images.pexels.com/photos/27334083/pexels-photo-27334083/free-photo-of-a-view-of-a-staircase-with-ornate-carvings.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
-          alt="Image description"
+          alt="post photo"
           className={styles.img}
           priority
           layout="fill"
@@ -25,6 +25,7 @@ function SinglePostPage() {
             width={50}
             height={50}
             priority
+            alt="avatar"
           />
           <div className={styles.detailText}>
             <span className={styles.detailTittle}>published</span>
