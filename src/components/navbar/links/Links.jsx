@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import styles from "./links.module.css";
-import NavLink from "./navLink/navLink";
 import Image from "next/legacy/image";
+import NavLink from "./navLink/NavLink";
 const links = [
   {
     title: "Homepage",
