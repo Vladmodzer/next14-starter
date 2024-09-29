@@ -1,3 +1,6 @@
+.container {
+  display: flex;
+}
 .links {
   display: flex;
   align-items: center;
