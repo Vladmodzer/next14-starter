@@ -21,11 +21,11 @@
   object-fit: cover; /* Сохранение пропорций изображения */
 }
 
-.date {
+/* .date {
   font-size: small;
   transform: rotate(270deg);
   margin: auto;
-}
+} */
 .bottom {
   height: inherit;
   display: flex;
@@ -34,11 +34,18 @@
 }
 .tittle {
   font-style: 24px;
-  margin-bottom: 20px;
+margin-bottom: 20px;
   width: 90%;
 }
+.tittleBlock {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
 .desc {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
   font-weight: 300;
   color: gray;
   width: 90%;

@@ -4,6 +4,8 @@ import styles from "./blog.module.css";
 
 const getData = async () => {
   const req = await fetch("https://jsonplaceholder.typicode.com/posts");
+  //fetch("url",{cache: "no-store"}) for oft data abdating
+
   if (!req.ok) {
     throw new Error("data BlogPage error");
   }

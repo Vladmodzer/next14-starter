@@ -16,14 +16,17 @@ function PostCard({post}) {
             layout="fill" // используйте 'fill', если у вас правильно настроен контейнер
           />
         </div>
-        <span className={styles.date}>01.08.2024</span>
+        {/* <span className={styles.date}>01.08.2024</span> */}
       </div>
       <div className={styles.bottom}>
+        <div className={styles.tittleBlock}>
+
         <h1 className={styles.title}>{post.title}</h1>
         <p className={styles.desc}>
           {post.body}
         </p>
-        <Link className={styles.link} href="/blog/post">
+        </div>
+        <Link className={styles.link} href={`/blog/${post.id}`}>
           READ MORE
         </Link>
       </div>

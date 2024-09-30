@@ -21,8 +21,9 @@
   flex-direction: column;
   gap: 50px;
 }
-.tittle {
+.title {
   font-size: 64px;
+
 }
 .detail {
   display: flex;

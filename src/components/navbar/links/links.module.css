@@ -17,6 +17,9 @@
 .menuButton {
   display: none !important;
 }
+.links span{
+  display: none;
+}
 @media (max-width: 768px) {
   .links {
     display: none;

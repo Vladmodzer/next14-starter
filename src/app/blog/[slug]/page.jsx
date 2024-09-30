@@ -1,9 +1,29 @@
 import Image from "next/legacy/image";
 import styles from "./singlePost.module.css";
-
-function SinglePostPage() {
-  // console.log(params);
+import PostUser from "@/components/postUser/PostUser.jsx"
+const getData = async (slug) => {
+  const req = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
+  //fetch("url",{cache: "no-store"}) for oft data abdating
   
+  if (!req.ok) {
+    throw new Error("data SinglePostPageerror");
+  }
+  return req.json();
+};
+const getUserData = async (userId) => {
+  const req = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
+  if (!req.ok) {
+    throw new Error("Error fetching user data");
+  }
+
+  const user = await req.json();
+  return user;
+};
+async function SinglePostPage({ params }) {
+  // console.log(params); = slag adress
+  const {slug} = params
+  const post = await getData(slug);
+  const user = await getUserData(post.userId)
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
@@ -14,10 +34,12 @@ function SinglePostPage() {
           priority
           layout="fill"
         />
-      
       </div>
       <div className={styles.textContainer}>
-        <h1 className={styles.tittle}>Tittle</h1>
+        <div>
+
+        <h1 className={styles.title}>{post.title}</h1>
+        </div>
         <div className={styles.detail}>
           <Image
             src="https://images.pexels.com/photos/27334083/pexels-photo-27334083/free-photo-of-a-view-of-a-staircase-with-ornate-carvings.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
@@ -27,16 +49,18 @@ function SinglePostPage() {
             priority
             alt="avatar"
           />
+           {/* <div className={styles.detailText}>
+            <span className={styles.detailTittle}>{user.id}</span>
+            <span className={styles.detaiValue}>{user.name}</span>
+          </div> */}
+          <PostUser user={user}/>
           <div className={styles.detailText}>
             <span className={styles.detailTittle}>published</span>
             <span className={styles.detaiValue}>01.08.2024</span>
           </div>
         </div>
         <div className={styles.content}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quasi
-          voluptates reprehenderit assumenda ab vel modi at fuga repellendus
-          eaque laboriosam libero culpa ex architecto unde voluptas, deleniti
-          enim inventore?
+          {post.body}
         </div>
       </div>
     </div>

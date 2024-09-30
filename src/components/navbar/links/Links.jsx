@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./links.module.css";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import NavLink from "./navLink/NavLink";
 const links = [
   {
@@ -25,7 +25,7 @@ function Links() {
   const [open, setOpen] = useState(false);
 
   // TEMPORARY
-  const session = true; 
+  const session = true;
   const isAdmin = true;
   return (
     <div className={styles.container}>
@@ -42,7 +42,6 @@ function Links() {
           <NavLink item={{ title: "Login", path: "/login" }} />
         )}
       </div>
-
       <Image
         src="/menu.png"
         alt=""
