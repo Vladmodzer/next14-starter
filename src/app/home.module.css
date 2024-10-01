@@ -36,10 +36,10 @@
   border: none;
   border-radius: 5px;
 }
-.button:first-child {
+/* .button:first-child {
   background: var(--btn-bg);
   color: var(--text);
-}
+} */
 @media (max-width: 1024px) {
   .container {
     flex-direction: column;

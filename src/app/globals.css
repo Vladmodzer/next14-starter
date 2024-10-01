@@ -4,6 +4,7 @@
   --text: white;
   --textSoft: #e5e5e5;
   --btn: #3673fd;
+  --lightGray: #aba6a6;
 }
 /* styles/global.css */
 * {
@@ -35,7 +36,20 @@ input,
 textarea {
   font: inherit;
 }
-
+button {
+  all: unset; /* Убирает все стили по умолчанию */
+  display: inline-block; /* Убедитесь, что кнопка ведет себя как блочный элемент */
+  cursor: pointer; /* Указатель мыши при наведении */
+  border-radius: 4px; /* Установите желаемый радиус */
+  padding: 10px 20px; /* Задайте внутренние отступы для кнопки */
+  background-color: var(--btn); /* Цвет фона кнопки */
+  color: white; /* Цвет текста кнопки */
+  text-align: center; /* Выравнивание текста по центру */
+}
+button:hover {
+  background: var(--textSoft) !important;
+  color: var(--bg) !important;
+}
 a {
   color: inherit;
   text-decoration: none;

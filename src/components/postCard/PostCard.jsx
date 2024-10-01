@@ -3,7 +3,7 @@ import Image from "next/legacy/image";
 import styles from "./postCard.module.css";
 import Link from "next/link";
 
-function PostCard({post}) {
+function PostCard({ post }) {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -15,16 +15,14 @@ function PostCard({post}) {
             priority
             layout="fill" // используйте 'fill', если у вас правильно настроен контейнер
           />
+          <div className={styles.overlay}></div>
         </div>
         {/* <span className={styles.date}>01.08.2024</span> */}
       </div>
       <div className={styles.bottom}>
-        <div className={styles.tittleBlock}>
-
-        <h1 className={styles.title}>{post.title}</h1>
-        <p className={styles.desc}>
-          {post.body}
-        </p>
+        <div className={styles.titleBlock}>
+          <h1 className={styles.title}>{post.title}</h1>
+          <p className={styles.desc}>{post.body}</p>
         </div>
         <Link className={styles.link} href={`/blog/${post.id}`}>
           READ MORE
